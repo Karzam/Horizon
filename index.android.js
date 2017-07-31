@@ -6,7 +6,8 @@
 
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, View } from 'react-native';
-import { Container, Content, Footer, FooterTab, Button, Icon, Badge, Text } from 'native-base';
+import { Container, Content, Header, Body, Title, Footer, FooterTab, Button, Icon, Badge, Text } from 'native-base';
+import { Router, Scene } from 'react-native-router-flux';
 import style from './styles/style'
 import HomeScreen from './components/screens/HomeScreen.js'
 import ExploreScreen from './components/screens/ExploreScreen.js'
@@ -44,6 +45,11 @@ export default class Horizon extends Component
     {
         return (
             <Container>
+                <Header>
+                    <Body>
+                        <Title>Horizon</Title>
+                    </Body>
+                </Header>
                 { this.state.currentScreen }
                 <Content/>
                 <TabBar switchScreen = {this.switchScreen} />
